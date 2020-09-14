@@ -1,0 +1,42 @@
+unit uPessoa;
+
+interface
+  Type
+    Tpessoa = Class
+
+    Private
+      FNome : String;
+      FIdade : Integer;
+      FCPF : String;
+      Procedure SetNome(Value : String);
+      Procedure SetIdade(Value : Integer);
+      Procedure SetCPF(Value : String);
+
+
+    Public
+       Property Nome : String read FNome write SetNome;
+       Property Idade : Integer read FIdade write SetIdade;
+       Property CPF : String read FCPF write SetCPF;
+
+End;
+
+implementation
+
+{ Tpessoa }
+
+procedure Tpessoa.SetCPF(Value: String);
+begin
+
+end;
+
+procedure Tpessoa.SetIdade(Value: Integer);
+begin
+
+end;
+
+procedure Tpessoa.SetNome(Value: String);
+begin
+
+end;
+
+end.

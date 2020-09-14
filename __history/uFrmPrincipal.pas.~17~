@@ -1,0 +1,47 @@
+unit uFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, uPessoa;
+
+type
+  TForm5 = class(TForm)
+    BTCadastrar: TButton;
+    Lista: TMemo;
+    EdtNome: TEdit;
+    EdtIdade: TEdit;
+    EdtCPF: TEdit;
+    LbNome: TLabel;
+    LbIdade: TLabel;
+    LbCPF: TLabel;
+    PTitulo: TPanel;
+    procedure BTCadastrarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form5: TForm5;
+  Pessoa: TPessoa;
+  Pessoas: array of TPessoa;
+  Indice: Integer = 0;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm5.BTCadastrarClick(Sender: TObject);
+
+begin
+  Pessoa := TPessoa.Create;
+  Pessoa.Nome := EdtNome.text;
+  Pessoa.Idade := StrToInt(EdtIdade.text);
+  Pessoa.CPF := EdtCPF.text;
+End;
+
+End.

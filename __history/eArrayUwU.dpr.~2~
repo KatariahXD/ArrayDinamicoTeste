@@ -1,0 +1,15 @@
+program eArrayUwU;
+
+uses
+  Vcl.Forms,
+  uFrmPrincipal in 'uFrmPrincipal.pas' {Form5},
+  uPessoa in 'uPessoa.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm5, Form5);
+  Application.Run;
+end.
